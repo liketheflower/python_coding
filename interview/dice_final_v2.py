@@ -5,7 +5,7 @@ def memoize(f):
 #    print x
     print memo
     def helper(x):
-        print "inner memo", memo
+       # print "inner memo", memo
         if x not in memo:
             memo[x]=f(x)
 	return memo[x]
@@ -50,4 +50,5 @@ def die_game_fair_value(rolls):
 
 if __name__=="__main__":
     n= int(input("please input a positive integer:"))
+    #die_game_fair_value = memoize(die_game_fair_value)
     print die_game_fair_value(n)
