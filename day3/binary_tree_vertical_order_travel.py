@@ -19,8 +19,12 @@ class Solution(object):
         queue = [(root, 0)]
         for node, i in queue:
            if node:
+               print 'node, i', node.value, i
                cols[i].append(node.value)
+               print 'cols', cols
                queue  += (node.left, i-1), (node.right, i + 1)
+               print 'queue'
+               print queue
         return [cols[i] for i in sorted(cols)]
 
 def build_tree(list_):
@@ -46,7 +50,8 @@ def build_tree(list_):
 
 a = Solution()
 list_ = [3,9,8,4,0,1,7]
-list_ = [3,9,8,4,0,1,7,None,None,None,2,5]
+list_ = [3, 9 ,8, 4, 5]
+#list_ = [3,9,8,4,0,1,7,None,None,None,2,5]
 root = build_tree(list_)
 print root.value
 print "left and right"
