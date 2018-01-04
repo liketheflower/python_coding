@@ -77,14 +77,12 @@ class Solution(object):
             #for gr_ in grid:
              #   print gr_
         return wall
-        
 
+        
 grid = [[0,1,0,0,0,0,0,1],
  [0,1,0,0,0,0,0,1],
  [0,0,0,0,0,0,0,1],
  [0,0,0,0,0,0,0,0]]
-
-
 import time
 start_time = time.time()
 a = Solution()
