@@ -1,8 +1,8 @@
 # python_coding
 
 
+# 1) itertools.combinations(a, i)
 ```
-itertools.combinations(people_list, i)
 >>> import itertools
 >>> a = [1,2,3,4]
 >>> for element in itertools.combinations(a,3):
