@@ -117,3 +117,24 @@ class Solution(object):
 def pyramid(bottom):
             return len(bottom) == 1 or any(pyramid(i) for i in product(*(f[a][b] for a, b in zip(bottom, bottom[1:]))))
 ```
+
+```python
+>>> import collections
+>>> allowed = ["ABC","BCD","CDE"]
+>>> f = collections.defaultdict(lambda: collections.defaultdict(list))
+>>> for a, b, c in allowed: f[a][b].append(c)
+... 
+>>> f
+defaultdict(<function <lambda> at 0x101d25c08>, {'A': defaultdict(<type 'list'>, {'B': ['C']}), 'C': defaultdict(<type 'list'>, {'D': ['E']}), 'B': defaultdict(<type 'list'>, {'C': ['D']})})
+>>> f['A']
+defaultdict(<type 'list'>, {'B': ['C']})
+>>> f['A']['B']
+['C']
+>>> type(f)
+<type 'collections.defaultdict'>
+>>> type(f['A'])
+<type 'collections.defaultdict'>
+>>> type(f['A']['B'])
+<type 'list'>
+>>> 
+```
