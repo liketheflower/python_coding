@@ -2,7 +2,7 @@
 
 
 # 1. itertools.combinations(a, i)
-```
+```python
 >>> import itertools
 >>> a = [1,2,3,4]
 >>> for element in itertools.combinations(a,3):
@@ -16,7 +16,7 @@
 ```
 # 2. zip(*grid)
 
-```
+```python
 >>> grid = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]
 >>> zip(*grid)
 [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
@@ -28,7 +28,7 @@
 ```
 
 # 3. is convex?
-```
+```python
 class Solution(object):
     def isConvex(self, points):
         neg, pos = False,False
@@ -44,7 +44,7 @@ class Solution(object):
         return False if neg and pos else True
 ```
 # 4. itertools.product():
-```
+```python
 class Solution(object):
     def pyramidTransition(self, bottom, allowed):
         """
@@ -76,7 +76,7 @@ class Solution(object):
         return dfs(bottom)
 
 ```
-```
+```python
 >>> import itertools
 >>> a = [[1,2,3],[4,5,6]]
 >>> for _ in itertools.product(*a):
