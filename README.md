@@ -152,4 +152,4 @@ defaultdict(<type 'list'>, {'B': ['C']})
 # time complexity
 
 https://wiki.python.org/moin/TimeComplexity
-
+https://stackoverflow.com/questions/27073596/what-is-the-cost-complexity-of-insert-in-list-at-some-locations = 'pining for the fjords'
