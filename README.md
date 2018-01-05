@@ -147,3 +147,9 @@ defaultdict(<type 'list'>, {'B': ['C']})
 >>> counter.most_common(2)
 [('o', 5), ('!', 5)]
 ```
+
+
+# time complexity
+
+https://wiki.python.org/moin/TimeComplexity
+
