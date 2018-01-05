@@ -138,3 +138,12 @@ defaultdict(<type 'list'>, {'B': ['C']})
 <type 'list'>
 >>> 
 ```
+
+# 6. Collections.Counter
+
+```python
+>>> from collections import Counter
+>>> counter = Counter('hellooo i am a potato!!!!!')
+>>> counter.most_common(2)
+[('o', 5), ('!', 5)]
+```
