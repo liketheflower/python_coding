@@ -149,7 +149,64 @@ defaultdict(<type 'list'>, {'B': ['C']})
 ```
 
 
-# time complexity
+# 7 time complexity
 
 https://wiki.python.org/moin/TimeComplexity
 https://stackoverflow.com/questions/27073596/what-is-the-cost-complexity-of-insert-in-list-at-some-locations = 'pining for the fjords'
+
+# 8 sort by begin or sort by end of two intervals
+
+
+```python
+#1) sort by end:  after sorting we know: s1<e1<e2   and s2<e2
+#(in order to make it be easier, we do not consider about "="). 
+#Then s2 has three possible positions. I am giving those three possibilities by "@". :     @s1@e1@e2 
+#Then we have 3 cases.
+       #case 1: s2<s1<e1  @<e2 (replace the first "@"by s2 and remove the rest "@")   
+                         #s1****e1
+         #s2*****************************e2
+
+
+        #case 2:s1<s2<e1 <e2 
+         #s1*****************e1
+                      #s2*******************e2
+        
+
+       #case 3:s1<e1< s2 <e2 
+        #s1************e1
+                                     #s2**************e2
+       
+#2) sort by start(similar as sort by end):   s1@s2@e2@
+        #case1:    s1 <e1 <s2< e2
+         #s1******e1
+                                     #s2************e2
+
+
+        #case2:    s1<s2<e1<e2
+         #s1***************e1
+                     #s2**********************e2
+
+
+        #case3:s1<s2<e2<e1
+          #s1************************************e1
+                          #s2********e2
+
+```
+
+# 9 relative location info of two intervals:
+s1<e1, s2<e2:
+all conbination is 4! = 4*3*2=24
+24/4 = 6 which are:
+
+s1 e1 s2 e2
+s1 s2 e1 e2
+s2 s1 e1 e2
+s2 e2 s1 e1
+
+
+up long , down short
+1.
+----------
+        ----
+
+_________
